@@ -68,7 +68,6 @@ const className = computed(() => {
 });
 
 onMounted(() => {
-  console.log('on mounted');
   new MDCRipple(container.value as unknown as Element)
 });
 </script>
