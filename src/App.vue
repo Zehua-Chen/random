@@ -1,5 +1,5 @@
 <style lang="scss" scoped>
-@use "./styles/colors";
+@use './styles/colors';
 
 .app {
   display: flex;
@@ -64,11 +64,11 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import Button from "./components/Button.vue";
-import Typography from "./components/Typography.vue";
-import RandomSection from "./components/RandomSection";
-import { RandomSectionModel, RandomConfiguration } from "./services";
+import { ref } from 'vue';
+import Button from './components/Button.vue';
+import Typography from './components/Typography.vue';
+import RandomSection from './components/RandomSection';
+import { RandomSectionModel, RandomConfiguration } from './services';
 
 const output = ref('Random String');
 const configuration = ref(new RandomConfiguration());
@@ -85,7 +85,7 @@ function onDelete(deleteIndex: number): void {
 
 function onGenerate(): void {
   if (configuration.value.sections.length === 0) {
-    output.value = "Must have at least one section";
+    output.value = 'Must have at least one section';
     return;
   }
 

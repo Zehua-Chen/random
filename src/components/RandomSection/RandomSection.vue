@@ -75,10 +75,10 @@ $std-padding: 8px;
 </template>
 
 <script setup lang="ts">
-import { defineProps, defineEmits } from "vue";
-import Button from "../Button.vue";
-import TextField from "../TextField.vue";
-import { RandomSectionModel } from "../../services";
+import { defineProps, defineEmits } from 'vue';
+import Button from '../Button.vue';
+import TextField from '../TextField.vue';
+import { RandomSectionModel } from '../../services';
 
 const props = defineProps({
   value: {
@@ -87,15 +87,15 @@ const props = defineProps({
       return new RandomSectionModel(0);
     },
   },
-})
+});
 
 const emit = defineEmits<{
-  (event: 'delete', e: MouseEvent): void,
+  (event: 'delete', e: MouseEvent): void;
 }>();
 
 function onDelete(event: MouseEvent) {
   event.preventDefault();
 
-  emit("delete", event);
+  emit('delete', event);
 }
 </script>

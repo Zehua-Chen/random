@@ -7,13 +7,13 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, computed } from "vue";
+import { defineProps, computed } from 'vue';
 
 const props = defineProps({
   variant: {
     type: String,
     default(): string {
-      return "body1";
+      return 'body1';
     },
   },
 });

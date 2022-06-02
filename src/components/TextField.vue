@@ -18,33 +18,33 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, defineEmits, onMounted, ref } from "vue";
-import { MDCTextField } from "@material/textfield";
+import { defineProps, defineEmits, onMounted, ref } from 'vue';
+import { MDCTextField } from '@material/textfield';
 
 const props = defineProps({
   label: {
     type: String,
     default() {
-      return "Label";
+      return 'Label';
     },
   },
   modelValue: {
     type: [String, Number],
     default() {
-      return "";
+      return '';
     },
   },
 });
 
 const emit = defineEmits<{
-  (event: 'update:modelValue', value: string): void,
+  (event: 'update:modelValue', value: string): void;
 }>();
 
 const container = ref<HTMLElement | null>(null);
 
 function onInput(event: Event) {
   const value = (event.target as HTMLInputElement).value;
-  emit("update:modelValue", value);
+  emit('update:modelValue', value);
 }
 
 onMounted(() => {
