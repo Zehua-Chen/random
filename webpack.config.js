@@ -67,9 +67,8 @@ module.exports = (env) => {
       new CleanWebpackPlugin(),
     ],
     devServer: {
-      host: "0.0.0.0",
+      host: "localhost",
       port: 4000,
-      disableHostCheck: true,
     },
     devtool: "source-map",
     optimization: {
@@ -77,7 +76,7 @@ module.exports = (env) => {
       splitChunks: {
         chunks: "all"
       },
-      moduleIds: 'hashed',
+      moduleIds: 'deterministic',
     }
   };
 
