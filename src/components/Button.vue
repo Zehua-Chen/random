@@ -1,6 +1,6 @@
 <style lang="scss" scoped>
-@use "../styles/colors";
-@use "@material/button";
+@use '../styles/colors';
+@use '@material/button';
 
 .raised-secondary {
   @include button.filled-accessible(colors.$secondary);
@@ -24,8 +24,8 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps, onMounted, ref, computed } from "vue";
-import { MDCRipple } from "@material/ripple";
+import { defineProps, onMounted, ref, computed } from 'vue';
+import { MDCRipple } from '@material/ripple';
 
 const container = ref(null);
 
@@ -33,13 +33,13 @@ const props = defineProps({
   color: {
     type: String,
     default(): string {
-      return "primary";
+      return 'primary';
     },
   },
   variant: {
     type: String,
     default(): string {
-      return "raised";
+      return 'raised';
     },
   },
   block: {
@@ -52,7 +52,7 @@ const props = defineProps({
 
 const className = computed(() => {
   const { color, variant, block } = props;
-  let classes: string[] = ["mdc-button"];
+  let classes: string[] = ['mdc-button'];
 
   if (variant) {
     classes.push(`mdc-button--${variant}`);
@@ -61,13 +61,13 @@ const className = computed(() => {
   classes.push(`${variant}-${color}`);
 
   if (block) {
-    classes.push("block");
+    classes.push('block');
   }
 
-  return classes.join(" ");
+  return classes.join(' ');
 });
 
 onMounted(() => {
-  new MDCRipple(container.value as unknown as Element)
+  new MDCRipple(container.value as unknown as Element);
 });
 </script>
