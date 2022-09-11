@@ -47,15 +47,17 @@
       <div class="container">
         <div class="row">
           <div class="col-12 bottombar-section">
-            <Typography variant="headline6">{{ output }}</Typography>
+            <Typography aria-label="output" variant="headline6">
+              {{ output }}
+            </Typography>
           </div>
           <div class="col-12 bottombar-section">
             <Button block @click="onGenerate">Generate</Button>
           </div>
           <div class="col-12 bottombar-section">
-            <Button color="secondary" block @click="onAddSection"
-              >Add Sections</Button
-            >
+            <Button color="secondary" block @click="onAddSection">
+              Add Sections
+            </Button>
           </div>
         </div>
       </div>
