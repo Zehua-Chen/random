@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "start": "vite",
-    "test": "playwright test",
+    "e2e": "playwright test",
     "format": "prettier --write 'src/**/*.{js,ts,vue,scss}'",
     "build": "vite build --base https://zehua-chen.github.io/random/"
   },
